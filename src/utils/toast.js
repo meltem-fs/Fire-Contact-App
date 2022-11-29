@@ -1,8 +1,9 @@
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const Toastify = (msg) => {
+
+export const Toastify = (msg) => {
   toast.success(msg, {
-    position: "bottom-center",
+    position: "top-right",
     autoClose: 4000,
     hideProgressBar: false,
     closeOnClick: true,
@@ -10,5 +11,20 @@ const Toastify = (msg) => {
     draggable: true,
     progress: undefined,
   });
+
+
 };
-export default Toastify;
+
+
+export const ToastifyDark= (msg)=>{
+  toast(msg, {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+  });
+}
