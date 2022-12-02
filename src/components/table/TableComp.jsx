@@ -5,7 +5,7 @@ import { GetUser, DeleteUser } from "../../utils/functions";
 const TableComp = ({ handleUserEdit }) => {
   const { contactList } = GetUser();
   return (
-    <div className=" mx-auto">
+    <div className=" mx-auto shadow p-3 bg-white rounded">
       <h3 className="text-center">CONTACTS</h3>
       <Table striped bordered hover>
         <thead>
@@ -27,6 +27,7 @@ const TableComp = ({ handleUserEdit }) => {
 
                 <td>
                   <button
+                    className="btn btn-info"
                     onClick={() => {
                       handleUserEdit(
                         element?.id,
@@ -40,7 +41,12 @@ const TableComp = ({ handleUserEdit }) => {
                   </button>
                 </td>
                 <td>
-                  <button onClick={() => DeleteUser(element.id)}>delete</button>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => DeleteUser(element.id)}
+                  >
+                    delete
+                  </button>
                 </td>
               </tr>
             );

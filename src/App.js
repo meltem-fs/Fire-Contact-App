@@ -39,7 +39,7 @@ function App() {
 
 
   return (
-    <div className=" w-100 flex-wrap d-flex justify-content-evenly align-items-center">
+    <div style={{height:"100vh"}} className=" w-100 flex-wrap d-flex justify-content-evenly align-items-center">
       <FormComp
         values={values}
         setValues={setValues}
